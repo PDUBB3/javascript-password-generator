@@ -86,11 +86,13 @@ const generatePassword = function () {
   // Create prompt password length which is more than 8 but less than 128 characters
   let passwordlength = prompt("What is the length of your password?");
   console.log(passwordlength);
+  const passwordlength = parseInt(passwordlength,10);
+  console.log(passwordlength)
 
   // Create if/else statement that if the password is between 8 and 128 characters is true alert with hurray
   if (passwordlength > 8 && passwordlength < 128) {
     alert("Hurray");
-  }
+ 
 
   //if false alert that password needs to be 8 to 128 characters
     else { 
@@ -98,30 +100,35 @@ const generatePassword = function () {
     }
 
 // Create a validation function for the character type to generate a new array with the characters chosen
-if(islowercase) {
+if (islowercase) {
   chosenchararray.push(lowercasearray)
 }
-if(isuppercase) {
+if (isuppercase) {
   chosenchararray.push(uppercasearray)
 }
 
-if(isnumeric) {
+if (isnumeric) {
   chosenchararray.push(numericarray)
 }
-if(isspecialchar) {
+if (isspecialchar) {
   chosenchararray.push(specialchararray)
 }
-if(!lowercasearray && !isuppercase && !isnumeric &&!isspecialchar) {
+if (!lowercasearray && !isuppercase && !isnumeric &&!isspecialchar) {
   alert("At least one type of character needs to be selected")
 }
 console.log(chosenchararray);
 
+for (let i=0; i < passwordlength; i++) {
+  let randomarray =
+      chosenchararray[Math.floor(math.random() * chosenchararray.length)];
+  let randomcharacter =
+      randomarray[math.floor(math.random() * randomarray.length)];
 
-let randomarray =
-chosenchararray[Math.floor(math.random() * chosenchararray.length)];
-let randomcharacter = randomarray[math.floor(math.random() * randomarray.length)];
-consolelog(randomarray);
-consolelog(randomcharacter);
+passwordarray.push(randomcharacter);
+}
+consolelog(passwordarray);
+
+
 
 for (let i=0; i < passwordlength; i++) {
   let randomarray =
@@ -131,6 +138,10 @@ for (let i=0; i < passwordlength; i++) {
   consolelog(randomcharacter);
 
 }
+}
+
+
+
   // create variable to store generated password
   var password = "hellloo";
 
