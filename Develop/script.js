@@ -62,11 +62,21 @@ const uppercasearray = [
 ];
 
 // Declare numeric character arrays in global memory
-
 const numericarray = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 // Declare special character arrays in global memory
+const specialchararray = [ "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}".
+. "~", "/"];
 
+
+// Declare variables in global memory
+
+let islowercase;
+let isuppercase;
+let isnumeric;
+let isspecialchar;
+
+// Create prompt password length which is more than 8 but less than 128 characters
 const generatePassword = function () {
   let passwordlength = prompt("What is the length of your password?");
   console.log(passwordlength);
