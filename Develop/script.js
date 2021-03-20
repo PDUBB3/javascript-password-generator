@@ -32,8 +32,38 @@ const lowercasearray = [
 ];
 
 // Declare upper case character arrays in global memory
+const uppercasearray = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
 
 // Declare numeric character arrays in global memory
+
+const numericarray = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 // Declare special character arrays in global memory
 
