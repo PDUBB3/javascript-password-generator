@@ -128,26 +128,19 @@ passwordarray.push(randomcharacter);
 }
 consolelog(passwordarray);
 
-//create a variable to store generated password
-const password = passwordarray.join("");
-
-// Return with password generated
-return password;
-
 for (let i=0; i < passwordlength; i++) {
   let randomarray =
   chosenchararray[Math.floor(math.random() * chosenchararray.length)];
-  let randomcharacter = randomarray[math.floor(math.random() * randomarray.length)];
+  let randomcharacter = 
+  randomarray[math.floor(math.random() * randomarray.length)];
 
+  passwordarray.push(randomcharacter);
+}
   consolelog(randomcharacter);
-
-}
-}
-
 
 
   // create variable to store generated password
-  var password = "hellloo";
+  const password = passwordarray.join("");
 
   // return with password thats created
   return password;
