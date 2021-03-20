@@ -114,8 +114,25 @@ if(isspecialchar) {
 if(!lowercasearray && !isuppercase && !isnumeric &&!isspecialchar) {
   alert("At least one type of character needs to be selected")
 }
+console.log(chosenchararray);
+
+
+let randomarray =
+chosenchararray[Math.floor(math.random() * chosenchararray.length)];
+let randomcharacter = randomarray[math.floor(math.random() * randomarray.length)];
+consolelog(randomarray);
+consolelog(randomcharacter);
+
+for (let i=0; i < passwordlength; i++) {
+  let randomarray =
+  chosenchararray[Math.floor(math.random() * chosenchararray.length)];
+  let randomcharacter = randomarray[math.floor(math.random() * randomarray.length)];
+
+  consolelog(randomcharacter);
+
+}
   // create variable to store generated password
-  var password = "";
+  var password = "hellloo";
 
   // return with password thats created
   return password;
