@@ -76,18 +76,28 @@ let isuppercase;
 let isnumeric;
 let isspecialchar;
 
+// Declare a new array which contains chosen characters
+const chosenchararray = [] ;
+
 // Create prompt password length which is more than 8 but less than 128 characters
 const generatePassword = function () {
   let passwordlength = prompt("What is the length of your password?");
   console.log(passwordlength);
 
+  // Create if/else statement that if the password is between 8 and 128 characters is true alert with hurray
   if (passwordlength > 8 && passwordlength < 128) {
     alert("Hurray");
   }
-};
+
+  //if false alert that password needs to be 8 to 128 characters
+    else { 
+    alert("Password needs to be between 8 and 128 characters");
+
+    }
 
 // Declare function which generates password
 function generatePassword() {
+
   // create variable to store generated password
   var password = "";
 
