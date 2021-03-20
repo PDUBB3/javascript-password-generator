@@ -128,7 +128,11 @@ passwordarray.push(randomcharacter);
 }
 consolelog(passwordarray);
 
+//create a variable to store generated password
+const password = passwordarray.join("");
 
+// Return with password generated
+return password;
 
 for (let i=0; i < passwordlength; i++) {
   let randomarray =
