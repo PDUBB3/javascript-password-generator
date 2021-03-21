@@ -68,6 +68,14 @@ const numericarray = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const specialchararray = [ "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}".
 . "~", "/"];
 
+
+// Declare variables in global memory
+
+let islowercase;
+let isuppercase;
+let isnumeric;
+let isspecialchar;
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
