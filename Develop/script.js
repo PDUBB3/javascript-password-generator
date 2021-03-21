@@ -61,6 +61,9 @@ const uppercasearray = [
   "Z",
 ];
 
+// Declare numeric character arrays in global memory
+const numericarray = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
