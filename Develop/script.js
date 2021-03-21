@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
 // Declare lower case character arrays in global memory
 const lowercasearray = [
   "a",
@@ -75,9 +76,34 @@ let isuppercase;
 let isnumeric;
 let isspecialchar;
 
-
 // Declare function which generates password
 const generatePassword = function () {
+
+// Declare new array to contain types of character chosen
+const chosenchararray = []; 
+
+// add validations functiosn for generate a new array with characters chosen
+if (islowercase) {
+  chosenchararray.push(lowercasearray);
+}
+if (isuppercase) {
+  chosenchararray.push(uppercasearray);
+}
+if (isnumeric) {
+  chosenchararray.push(numericarray);
+}
+if (isspecialchar) {
+  chosenchararray.push(isspecialchar);
+}
+else {
+  alert("At least one character needs to be selected")
+}
+if (!islowercase && !isuppercase && !isnumeric && !isspecialchar) {
+  alert("At least one type of character needs to be selected");
+}
+console.log(chosenchararray);
+
+
 
  // Create prompt password length which is more than 8 but less than 128 characters
  let passwordlength = prompt("What is the length of your password?");
@@ -86,7 +112,7 @@ const generatePassword = function () {
  console.log(passwordlength)
 
  // Create if/else statement that if the password is between 8 and 128 characters is true alert with hurray
- if (passwordlength > 8 && passwordlength < 128) {
+ if (passwordlength > 8 && passwordlength <= 128) {
    alert("Hurray");
 
 
@@ -95,6 +121,23 @@ const generatePassword = function () {
    alert("Password needs to be between 8 and 128 characters");
    }
 
+// create loop to choose password
+
+for (let i=0; i < passwordlength; i++) {
+  let randomarray =
+  chosenchararray[Math.floor(math.random() * chosenchararray.length)];
+  let randomcharacter = 
+  randomarray[math.floor(math.random() * randomarray.length)];
+
+  passwordarray.push(randomcharacter);
+}
+  console.log(passwordarray);
+
+  // create variable to store generated password
+  const password = passwordarray.join("");
+
+  // return with password thats created
+  return password;  
 
 // Write password to the #password input
 function writePassword() {
@@ -105,4 +148,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);1
