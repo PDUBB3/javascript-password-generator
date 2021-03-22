@@ -66,8 +66,8 @@ const uppercasearray = [
 const numericarray = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 // Declare special character arrays in global memory
-const specialchararray = [ "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}".
-. "~", "/"];
+const specialchararray = [ "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", ".", 
+".", ",", "~", "/"];
 
 // Declare variables in global memory
 
@@ -90,7 +90,7 @@ const generatePassword = function () {
  // Create if/else statement that if the password is between 8 and 128 characters is true alert with hurray
  if (passwordlength > 8 && passwordlength <= 128) {
    alert("Hurray");
-
+ }
  //if false alert that password needs to be 8 to 128 characters
    else { 
    alert("Password needs to be between 8 and 128 characters");
