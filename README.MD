@@ -26,15 +26,14 @@ As an employee with access to sensitive data, we were tasked to randomly generat
 - Navigate into project
 - Open the project into VS code
 
-````git clone git@github.com:PDUBB3/javascript-password-generator.git
+git clone git@github.com:PDUBB3/javascript-password-generator.git
 cd javascript-password-generator
-code . ```
+code .
 
-- Create ```README.MD``` file
+- Create `README.MD` file
 
 ## Screenshots
 
 ## Link to deployed application
 
 Click [here](https://pdubb3.github.io/javascript-password-generator/) to deployed application
-````
