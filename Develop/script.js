@@ -140,7 +140,8 @@ if (isnumeric) {
 }
 if (isspecialchar) {
   chosenchararray.push(isspecialchar);
-} else {
+} 
+else {
   alert("At least one character needs to be selected");
 }
 if (!islowercase && !isuppercase && !isnumeric && !isspecialchar) {
