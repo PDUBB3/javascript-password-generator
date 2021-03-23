@@ -109,45 +109,51 @@ let isuppercase;
 let isnumeric;
 let isspecialchar;
 
-// Declare new array to contain types of character chosen
-const chosenchararray = [];
-
-// add validations functions for generate a new array with characters chosen
-if (islowercase) {
-  chosenchararray.push(lowercasearray);
-}
-if (isuppercase) {
-  chosenchararray.push(uppercasearray);
-}
-if (isnumeric) {
-  chosenchararray.push(numericarray);
-}
-if (isspecialchar) {
-  chosenchararray.push(isspecialchar);
-}
-if (!islowercase && !isuppercase && !isnumeric && !isspecialchar) {
-  alert("At least one type of character needs to be selected");
-}
-console.log(chosenchararray);
-
-
 // Declare function which generates password
 function generatePassword() {
+  const passwordarray = [];
+  const passwordlength = prompt(
+    "How many characters would you want your password to be?"
+  );
+  console.log(passwordlength);
+  const passwordlengthnumber = parseInt(passwordlength, 10);
+  console.log(passwordlengthnumber);
 
-// Declare new array to contain types of character chosen
-const passwordnumber = () => {
+  // Create if/else statement that if the password is between 8 and 128 characters is true alert with hurray
+  if (passwordlengthnumber >= 8 && passwordlengthnumber <= 128) {
+  } else {
+    alert("Password should be between 8 and 128 characters");
+  }
+  // add validations functions for generate a new array with characters chosen
+  if (islowercase) {
+    chosenchararray.push(lowercasearray);
+  }
+  if (isuppercase) {
+    chosenchararray.push(uppercasearray);
+  }
+  if (isnumeric) {
+    chosenchararray.push(numericarray);
+  }
+  if (isspecialchar) {
+    chosenchararray.push(isspecialchar);
+  }
+  if (!islowercase && !isuppercase && !isnumeric && !isspecialchar) {
+    alert("At least one type of character needs to be selected");
+  }
+  console.log(chosenchararray);
 
-// Create prompt password length which is more than 8 but less than 128 characters
-const passwordlength = prompt(
-"How many characters would you want your password to be?"
-);
-console.log(passwordlength);
-const passwordlengthnumber = parseInt(passwordlength, 10);
-console.log(passwordlengthnumber);
-};
+  //create loop to choose password
 
-// Create if/else statement that if the password is between 8 and 128 characters is true alert with hurray
-if (passwordlengthnumber >= 8 && passwordlengthnumber <= 128) {
+  for (let i = 0; i < passwordlength; i++) {
+    let randomarray =
+      chosenchararray[Math.floor(Math.random() * chosenchararray.length)];
+    let randomcharacter =
+      randomarray[Math.floor(Math.random() * randomarray.length)];
+
+    passwordarray.push(randomcharacter);
+  }
+  console.log(passwordarray);
+
   // confirm if lowercase characters are included
   const islowercase = confirm("Do you want password to include lowercase?");
   console.log(islowercase);
@@ -169,30 +175,16 @@ if (passwordlengthnumber >= 8 && passwordlengthnumber <= 128) {
     "Do you want password to include special character?"
   );
   console.log(isspecialchar);
+
+  // Declare new array to contain types of character chosen
+  const chosenchararray = [];
+
+  // create variable to store generated password
+  const password = passwordarray.join("");
+
+  // return with password thats created
+  return password;
 }
-//if false alert that password needs to be 8 to 128 characters
-else {
-  alert("Password should be between 8 and 128 characters");
-}
-
-//create loop to choose password
-
-for (let i = 0; i < passwordlength; i++) {
-  let randomarray =
-    chosenchararray[Math.floor(Math.random() * chosenchararray.length)];
-  let randomcharacter =
-    randomarray[Math.floor(Math.random() * randomarray.length)];
-
-  passwordarray.push(randomcharacter);
-}
-console.log(randomarray);
-
-// create variable to store generated password
-const password = passwordarray.join("");
-
-// return with password thats created
-return password;
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -203,4 +195,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-1;
