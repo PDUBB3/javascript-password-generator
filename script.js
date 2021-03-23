@@ -178,9 +178,8 @@ function generatePassword() {
     passwordarray.push(randomcharacter);
   }
   console.log(passwordarray);
-  console.log(passwordarray).join("");
   // create variable to store generated password
-  var password = "hello";
+  const password = passwordarray.join("");
   // return with password thats created
   return password;
 }
