@@ -34,7 +34,7 @@ code .
 
 ## Screenshots
 
-![image](./assets/images/password-generator-screenshot.png "Password generator screenshot")
+![image](./assets/images/password-generator-screenshots.png "Password generator screenshot")
 
 ## Link to deployed application
 
