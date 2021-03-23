@@ -119,14 +119,8 @@ function generatePassword() {
     "How many characters would you want your password to be?"
   );
   console.log(passwordlength);
-  const passwordlengthnumber = parseInt(passwordlength, 10);
+  const passwordlengthnumber = parseInt(passwordlength);
   console.log(passwordlengthnumber);
-
-  // Create if/else statement that if the password is between 8 and 128 characters is true alert with hurray
-  if (passwordlengthnumber >= 8 && passwordlengthnumber <= 128) {
-  } else {
-    alert("Password should be between 8 and 128 characters");
-  }
 
   // confirm if lowercase characters are included
   const islowercase = confirm("Do you want password to include lowercase?");
@@ -149,6 +143,12 @@ function generatePassword() {
     "Do you want password to include special character?"
   );
   console.log(isspecialchar);
+
+  // Create if/else statement that if the password is between 8 and 128 characters is true or else alert with password should be between 8 to 128
+  if (passwordlengthnumber >= 8 && passwordlengthnumber <= 128) {
+  } else {
+    alert("Password should be between 8 and 128 characters");
+  }
   // add validations functions for generate a new array with characters chosen
   if (islowercase) {
     chosenchararray.push(lowercasearray);
@@ -160,7 +160,7 @@ function generatePassword() {
     chosenchararray.push(numericarray);
   }
   if (isspecialchar) {
-    chosenchararray.push(isspecialchar);
+    chosenchararray.push(specialchararray);
   }
   if (!islowercase && !isuppercase && !isnumeric && !isspecialchar) {
     alert("At least one type of character needs to be selected");
