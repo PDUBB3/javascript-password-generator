@@ -109,6 +109,9 @@ let isuppercase;
 let isnumeric;
 let isspecialchar;
 
+// Declare new array to contain types of character chosen
+const chosenchararray = [];
+
 // Declare function which generates password
 function generatePassword() {
   const passwordarray = [];
@@ -124,6 +127,28 @@ function generatePassword() {
   } else {
     alert("Password should be between 8 and 128 characters");
   }
+
+  // confirm if lowercase characters are included
+  const islowercase = confirm("Do you want password to include lowercase?");
+  console.log(islowercase);
+
+  // Confirm if uppercase characters are included
+  const isuppercase = confirm(
+    "Do you want password to include uppercase characters?"
+  );
+  console.log(isuppercase);
+
+  // Confirm if numeric characters are included
+  const isnumeric = confirm(
+    "Do you want password to include numeric characters?"
+  );
+  console.log(isnumeric);
+
+  // Confirm is special characters are included
+  const isspecialchar = confirm(
+    "Do you want password to include special character?"
+  );
+  console.log(isspecialchar);
   // add validations functions for generate a new array with characters chosen
   if (islowercase) {
     chosenchararray.push(lowercasearray);
@@ -153,35 +178,9 @@ function generatePassword() {
     passwordarray.push(randomcharacter);
   }
   console.log(passwordarray);
-
-  // confirm if lowercase characters are included
-  const islowercase = confirm("Do you want password to include lowercase?");
-  console.log(islowercase);
-
-  // Confirm if uppercase characters are included
-  const isuppercase = confirm(
-    "Do you want password to include uppercase characters?"
-  );
-  console.log(isuppercase);
-
-  // Confirm if numeric characters are included
-  const isnumeric = confirm(
-    "Do you want password to include numeric characters?"
-  );
-  console.log(isnumeric);
-
-  // Confirm is special characters are included
-  const isspecialchar = confirm(
-    "Do you want password to include special character?"
-  );
-  console.log(isspecialchar);
-
-  // Declare new array to contain types of character chosen
-  const chosenchararray = [];
-
+  console.log(passwordarray).join("");
   // create variable to store generated password
-  const password = passwordarray.join("");
-
+  var password = "hello";
   // return with password thats created
   return password;
 }
