@@ -16,8 +16,8 @@ As an employee with access to sensitive data, we were tasked to randomly generat
 - [x] After you get password length and the length is an actual number, check if length if greater than 8 and less than 128 (>,if)
 - [x] If number not in range then alert the user to enter a valid length
 - [x] When each prompt is answered, the input should be validated with at least one character type.
-- [] When all prompts are answered, then a password is generated that matches the criteria
-- [] When password is generated, then the password is either displayed in an alert or written to the page.
+- [x] When all prompts are answered, then a password is generated that matches the criteria
+- [x] When password is generated, then the password is either displayed in an alert or written to the page.
 
 ## Getting started
 
@@ -33,6 +33,8 @@ code .
 - Create `README.MD` file
 
 ## Screenshots
+
+![image](./assets/images/password-generator-screenshot.png "Password generator screenshot")
 
 ## Link to deployed application
 
